@@ -1,0 +1,51 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(to right, #e6356f, #d07464);
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    height: 2rem;
+  }
+
+  .seperator {
+    border-left: 0.06rem solid #ffffff;
+    height: 2rem;
+    margin: 0 1rem;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  /* Media Query for tablets & Desktops for screen size handling*/
+@media (min-width: 48rem) {
+    .logo-image {
+      height: 2.5rem;
+    }
+  
+    .seperator {
+      height: 2.5rem;
+    }
+  
+    .header-title {
+      font-size: 2.625rem;
+    }
+  
+    .header {
+      padding: 1rem 3rem;
+    }
+  }
+  
