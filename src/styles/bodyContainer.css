@@ -1,0 +1,27 @@
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content-layer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.separator-line {
+    margin-top: 0.75rem;
+    width: 100%;
+    height: 0.06rem;
+    background-color: #ddd;
+}
+
+.arrow-icon {
+    width: .75rem;
+    height: .75rem;
+    margin: 0 0.5rem;
+}
