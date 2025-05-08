@@ -31,7 +31,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "5",                               
                 "VehMakeModel": {
-                  "@Name": "Toyota Rav4 or similar"
+                  "@Name": "Toyota Rav4"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/toyota/rav4/primary.png?auto=format&w=600"
               },                
@@ -54,7 +54,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "4",
                 "VehMakeModel": {
-                  "@Name": "Chrysler 300 or similar"
+                  "@Name": "Chrysler 300"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/chrysler/300/primary.png?auto=format&w=600"
               },                
@@ -85,7 +85,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "4",
                 "VehMakeModel": {
-                  "@Name": "Chevrolet Impala or similar"
+                  "@Name": "Chevrolet Impala"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/chevrolet/impala/primary.png?auto=format&w=600"
               },                
@@ -108,7 +108,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "3",
                 "VehMakeModel": {
-                  "@Name": "Chevrolet Impala or similar"
+                  "@Name": "Chevrolet Impala"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/chevrolet/impala/primary.png?auto=format&w=600"
               },                
@@ -131,7 +131,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "5",
                 "VehMakeModel": {
-                  "@Name": "Ford Escape or similar"
+                  "@Name": "Ford Escape"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/ford/escape/primary.png?auto=format&w=600"
               },                
@@ -154,7 +154,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "4",
                 "VehMakeModel": {
-                  "@Name": "Cadillac CTS or similar"
+                  "@Name": "Cadillac CTS"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/cadillac/cts/primary.png?auto=format&w=600"
               },                
@@ -177,7 +177,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "4",
                 "VehMakeModel": {
-                  "@Name": "Chrysler 300 or similar"
+                  "@Name": "Chrysler 300"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/chrysler/300/primary.png?auto=format&w=600"
               },                
@@ -210,7 +210,7 @@
                 "@DoorCount": "3",
                 "@Size": "6",
                 "VehMakeModel": {
-                  "@Name": "Toyota Corolla or similar"
+                  "@Name": "Toyota Corolla"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/toyota/corolla/primary.png?auto=format&w=600"
               },                
@@ -233,7 +233,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "2",
                 "VehMakeModel": {
-                  "@Name": "Kia Rio or similar"
+                  "@Name": "Kia Rio"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/kia/rio/primary.png?auto=format&w=600"
               },                
@@ -256,7 +256,7 @@
                 "@CodeContext": "CARTRAWLER",
                 "@DoorCount": "5",
                 "VehMakeModel": {
-                  "@Name": "Ford Focus or similar"
+                  "@Name": "Ford Focus"
                 },
                 "PictureURL": "https://ctimg-fleet.cartrawler.com/ford/focus/primary.png?auto=format&w=600"                
               },

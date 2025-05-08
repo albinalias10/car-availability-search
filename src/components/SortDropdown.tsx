@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import type { Option } from '../types/priceOptions';
+import type { Option } from '../types/priceOptionType';
 import { SORT_DROPDOWN_DEFAULT_LABEL, DROPDOWN_PLACEHOLDER_TEXT } from '../constants/constants';
 import angleDown from '../assets/icons/angle-down.svg';
 import angleUp from '../assets/icons/angle-up.svg';
