@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import type { Option } from '../types/priceOptions';
 import { SORT_DROPDOWN_DEFAULT_LABEL, DROPDOWN_PLACEHOLDER_TEXT } from '../constants/constants';
 import angleDown from '../assets/icons/angle-down.svg';
@@ -12,6 +12,7 @@ interface SortDropdownProps {
 const SortDropdown: React.FC<SortDropdownProps> = ({ options }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState<Option | null>(null);
+    const sortDropdownRef = useRef<HTMLDivElement>(null);
 
     const handleOptionClick = (option: Option) => {
         setSelectedOption(option);
@@ -19,8 +20,20 @@ const SortDropdown: React.FC<SortDropdownProps> = ({ options }) => {
         setIsOpen(false);
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+          if (isOpen && sortDropdownRef.current && !sortDropdownRef.current.contains(event.target as Node)) {
+            setIsOpen(false);
+          }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, [isOpen]);
+
     return (
-        <div className="sort-dropdown-container">
+        <div className="sort-dropdown-container" ref={sortDropdownRef}>
             <button
                 className="dropdown-button"
                 onClick={() => setIsOpen((prev) => !prev)}
