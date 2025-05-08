@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import type { Option } from '../types/priceOptions';
 import { SORT_DROPDOWN_DEFAULT_LABEL, DROPDOWN_PLACEHOLDER_TEXT } from '../constants/constants';
 import angleDown from '../assets/icons/angle-down.svg';
 import angleUp from '../assets/icons/angle-up.svg';
 import '../styles/SortDropdown.css';
+import type { AppDispatch, RootState } from '../redux/store';
+import { setSortingOrder } from '../redux/action';
+import type { SortValue } from '../redux/actionType';
 
 interface SortDropdownProps {
     options: Option[];
@@ -11,12 +15,16 @@ interface SortDropdownProps {
 
 const SortDropdown: React.FC<SortDropdownProps> = ({ options }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState<Option | null>(null);
+    const selectedSortValue = useSelector((state: RootState) => state.sortValue);
+    const [selectedOption, setSelectedOption] = useState<Option | null>(
+        options.find((option) => option.value === selectedSortValue) || null
+    );
+    const dispatch = useDispatch<AppDispatch>();
     const sortDropdownRef = useRef<HTMLDivElement>(null);
 
     const handleOptionClick = (option: Option) => {
         setSelectedOption(option);
-        console.log("Selected option:", option);
+        dispatch(setSortingOrder(option.value as SortValue)); // Dispatch the selected option value to Redux store
         setIsOpen(false);
     };
 
