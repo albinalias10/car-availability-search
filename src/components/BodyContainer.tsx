@@ -14,6 +14,7 @@ interface BodyContainerProps {
 
 const BodyContainer: React.FC<BodyContainerProps> = ({ isLoading = true }) => {
     const pickupReturnDetails = useSelector((state: RootState) => state.pickupReturnDetails);
+    const selectedCarDetails = useSelector((state: RootState) => state.selectedCarDetails);
     return (
         <div className="body-container">
             <div className="content-layer">
@@ -28,7 +29,7 @@ const BodyContainer: React.FC<BodyContainerProps> = ({ isLoading = true }) => {
                      {pickupReturnDetails.returnLocation}
                 </span>
             </CustomRoundedButton>
-            <SortDropdown options={priceOptions}/>
+            <SortDropdown options={priceOptions} isCarSelected={selectedCarDetails?.length > 0}/>
             </div>
             <div className="separator-line" />
             <CarContainer isLoading={isLoading}/>

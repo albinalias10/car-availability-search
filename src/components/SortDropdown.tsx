@@ -11,9 +11,10 @@ import type { SortValue } from '../redux/actionType';
 
 interface SortDropdownProps {
     options: Option[];
+    isCarSelected?: boolean;
 }
 
-const SortDropdown: React.FC<SortDropdownProps> = ({ options }) => {
+const SortDropdown: React.FC<SortDropdownProps> = ({ options, isCarSelected }) => {
     const [isOpen, setIsOpen] = useState(false);
     const selectedSortValue = useSelector((state: RootState) => state.sortValue);
     const [selectedOption, setSelectedOption] = useState<Option | null>(
@@ -41,10 +42,11 @@ const SortDropdown: React.FC<SortDropdownProps> = ({ options }) => {
       }, [isOpen]);
 
     return (
-        <div className="sort-dropdown-container" ref={sortDropdownRef}>
+        <div className={`sort-dropdown-container ${isCarSelected ? ' dropdown-disabled' : ''}`} ref={sortDropdownRef}>
             <button
                 className="dropdown-button"
                 onClick={() => setIsOpen((prev) => !prev)}
+                disabled={isCarSelected} 
             >
                 {SORT_DROPDOWN_DEFAULT_LABEL} {selectedOption ? selectedOption.label : DROPDOWN_PLACEHOLDER_TEXT}
                 <img

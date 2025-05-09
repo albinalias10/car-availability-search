@@ -30,6 +30,12 @@
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+.dropdown-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: linear-gradient(to right, #efefef, #ffffff);
+}
 
 .dropdown-arrow {
     width: .75rem;
