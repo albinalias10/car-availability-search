@@ -40,6 +40,7 @@ export interface setPickupReturnDetailsAction {
     type: typeof SET_PICKUP_RETURN_DETAILS;
     payload: PickupReturnDetails;
 }
+
 export interface setCarDetailsArrayAction {
     type: typeof SET_CAR_DETAILS_ARRAY_DATA;
     payload: CarDetails[];

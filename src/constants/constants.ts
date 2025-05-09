@@ -4,3 +4,5 @@
  export const UNLIMITED_KILOMETER_TEXT = "Unlimited Kilometers";
  export const PER_DAY_TEXT = "/day";
  export const LOADING_TEXT = "Loading...";
+ export const NETWORK_ERROR_TEXT = "Network Error! Please try again later.";
+ export const ERROR_DATA_TEXT = "Error fetching data:! Please try again later.";
