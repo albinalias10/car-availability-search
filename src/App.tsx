@@ -44,7 +44,8 @@ const App = () => {
           isAirConditioned: item.Vehicle["@AirConditionInd"] === 'true',
         }))
       );
-      dispatch(setCarDetailsArrayData(carDetailsData));
+      const sortedCarDetailsData: CarDetails[] = carDetailsData.sort((prevItem, nextItem) => prevItem.price - nextItem.price);
+      dispatch(setCarDetailsArrayData(sortedCarDetailsData));
       } catch (error) {
         console.error('Error fetching data:', error);
       }
