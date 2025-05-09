@@ -4,6 +4,7 @@ import '../styles/BodyContainer.css';
 import SortDropdown from './SortDropdown';
 import { priceOptions } from '../types/priceOptionType';
 import angleRight from '../assets/icons/angle-right.svg';
+import CarContainer from './CarContainer';
 
 interface BodyContainerProps {
     isLoading?: boolean;
@@ -19,7 +20,7 @@ const BodyContainer: React.FC<BodyContainerProps> = ({ isLoading = true }) => {
                     <img
                         src={angleRight}
                         alt=">"
-                        className={"arrow-icon"}
+                        className="arrow-icon"
                     />
                      Las Vegas - Airport
                 </span>
@@ -27,7 +28,7 @@ const BodyContainer: React.FC<BodyContainerProps> = ({ isLoading = true }) => {
             <SortDropdown options={priceOptions}/>
             </div>
             <div className="separator-line" />
-            {isLoading && <div className="loading-container">loading...</div>}
+            <CarContainer isLoading={isLoading}/>
         </div>
     );
 };

@@ -4,7 +4,7 @@ import './App.css'
 import BodyContainer from './components/BodyContainer'
 import Header from './components/Header'
 import type { AppDispatch } from './redux/store';
-import { setPickupReturnDetails } from './redux/action';
+import { setCarDetailsArrayData, setPickupReturnDetails } from './redux/action';
 import type { CarDetails, PickupReturnDetails } from './redux/actionType';
 import type { VehicleAvailability, VendorDetail } from './types/carDataType';
 
@@ -29,7 +29,7 @@ const App = () => {
           }
           dispatch(setPickupReturnDetails(carPickUPReturnLocationDetails));
         }
-      const carDetails: CarDetails = data[0]?.VehAvailRSCore?.VehVendorAvails.flatMap((vendorDetail: VendorDetail) =>
+      const carDetailsData: CarDetails[] = data[0]?.VehAvailRSCore?.VehVendorAvails.flatMap((vendorDetail: VendorDetail) =>
         vendorDetail.VehAvails.map((item: VehicleAvailability) => ({
           vendorName: vendorDetail.Vendor['@Name'],
           modelName: item.Vehicle.VehMakeModel['@Name'],
@@ -37,14 +37,14 @@ const App = () => {
           fuelType: item.Vehicle['@FuelType'],
           passengerQuantity: item.Vehicle['@PassengerQuantity'],
           baggageQuantity: item.Vehicle['@BaggageQuantity'],
+          doorQuantity: item.Vehicle['@DoorCount'],
           carImage: item.Vehicle['PictureURL'],
           price: parseFloat(item.TotalCharge['@RateTotalAmount']),
           currency: item.TotalCharge['@CurrencyCode'],
           isAirConditioned: item.Vehicle["@AirConditionInd"] === 'true',
         }))
       );
-
-        console.log(carDetails);
+      dispatch(setCarDetailsArrayData(carDetailsData));
       } catch (error) {
         console.error('Error fetching data:', error);
       }

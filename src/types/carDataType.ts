@@ -10,6 +10,7 @@ export interface VehicleAvailability {
         '@FuelType': string;
         '@PassengerQuantity': string;
         '@BaggageQuantity': string;
+        '@DoorCount': string;
         'PictureURL': string;
         '@AirConditionInd': string;
     };

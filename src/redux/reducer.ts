@@ -1,9 +1,10 @@
-import type { ActionTypes, PickupReturnDetails, SortValue, StoreState } from "./actionType";
+import type { ActionTypes, PickupReturnDetails, StoreState } from "./actionType";
 
 const initialState: StoreState = {
-    sortValue: "" as SortValue,
+    sortValue: "asc",
     pickupReturnDetails: {} as PickupReturnDetails,
-    carDetails: []
+    carDetailsData: [],
+    selectedCarDetails:[]
 };
 
 export const carReducer = (state = initialState, action: ActionTypes): StoreState => {
@@ -13,10 +14,15 @@ export const carReducer = (state = initialState, action: ActionTypes): StoreStat
                 ...state,
                 pickupReturnDetails: action.payload
             };
+        case "SET_CAR_DETAILS_ARRAY_DATA":
+            return {
+                ...state,
+                carDetailsData: action.payload
+            };
         case "SET_CAR_DETAILS":
             return {
                 ...state,
-                carDetails: action.payload
+                selectedCarDetails: action.payload
             };
         case "SET_SORTING_ORDER":
             return {

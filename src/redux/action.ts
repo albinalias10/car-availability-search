@@ -1,6 +1,7 @@
 import {
     SET_SORTING_ORDER,
     SET_PICKUP_RETURN_DETAILS,
+    SET_CAR_DETAILS_ARRAY_DATA,
     SET_CAR_DETAILS,
     type SortValue,
     type ActionTypes,
@@ -20,9 +21,16 @@ export const setPickupReturnDetails = (pickupReturnDetails: PickupReturnDetails)
         payload: pickupReturnDetails
     };
 };
-export const setCarDetails = (carDetails: CarDetails[]): ActionTypes => {
+export const setCarDetailsArrayData = (carDetails: CarDetails[]): ActionTypes => {
+    return {
+        type: SET_CAR_DETAILS_ARRAY_DATA,
+        payload: carDetails
+    };
+};
+
+export const setCarDetails = (selectedCarDetails: CarDetails[]): ActionTypes => {
     return {
         type: SET_CAR_DETAILS,
-        payload: carDetails
+        payload: selectedCarDetails
     };
 };

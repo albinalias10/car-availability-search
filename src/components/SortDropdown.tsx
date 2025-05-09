@@ -50,7 +50,7 @@ const SortDropdown: React.FC<SortDropdownProps> = ({ options }) => {
                 <img
                     src={isOpen ? angleUp : angleDown}
                     alt="arrow"
-                    className={"dropdown-arrow"}
+                    className="dropdown-arrow"
                 />
             </button>
             {isOpen && (
