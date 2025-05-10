@@ -30,7 +30,7 @@ This project is a combination of React + TypeScript that displays an application
 - npm
 
 ### 1. Clone the Repository
-- cline the repo git clone https://github.com/albinalias10/car-availability-search.git
+- clone the repo git clone https://github.com/albinalias10/car-availability-search.git
 - get into the repo "cd car-availability-search"
 - install the dependencies using "npm install"
 - for running in development server  "npm run dev"
