@@ -30,7 +30,7 @@
     font-weight: bold;
   }
 
-  /* Media Query for tablets & Desktops for screen size handling*/
+  /* Responsive for tablets & Desktops for the screen size handling*/
 @media (min-width: 48rem) {
     .logo-image {
       height: 2.5rem;

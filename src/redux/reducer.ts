@@ -30,6 +30,7 @@ export const carReducer = (state = initialState, action: ActionTypes): StoreStat
                 selectedCarDetails: action.payload
             };
         case "SET_SORTING_ORDER": {
+            // Sort the carDetailsData based on the sorting value (asc or desc)
             const sortedData: CarDetails[] = action.payload === "asc" ? [...state.carDetailsData].sort((prevItem, nextItem) => prevItem.price - nextItem.price) :
                 [...state.carDetailsData].sort((prevItem, nextItem) => nextItem.price - prevItem.price);
             return {

@@ -19,6 +19,7 @@ const CarItem: React.FC<CarItemProps> = ({ carDetails }) => {
     const dispatch = useDispatch<AppDispatch>();
 
     const handleClick = () => {
+        // Ading the selected car details to the redux store
         dispatch(setCarDetails([carDetails]));
     };
     return (

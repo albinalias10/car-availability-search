@@ -21,7 +21,7 @@
     width: 100%;
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation on hover */
 }
 
 .dropdown-button:hover {
@@ -83,7 +83,7 @@
     background-color: #111;
     color: white;
 }
-
+/* Responsive font size for mobile layout */
 @media (max-width: 480px) {
     .dropdown-button {
       font-size: 0.875rem;

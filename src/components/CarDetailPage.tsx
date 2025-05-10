@@ -18,6 +18,7 @@ const CarDetailPage: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
 
     const handleBackButtonClick = () => {
+        // Clear the selected car details when the back button is clicked
         dispatch(clearCarDetails());
     }
     return (
@@ -37,7 +38,7 @@ const CarDetailPage: React.FC = () => {
                             alt="Fuel:"
                             className="car-spec-icon"
                         /> {carDetails.fuelType}</div>
-                             <div className="car-spec-icon-layout"><img
+                        <div className="car-spec-icon-layout"><img
                             src={transmission}
                             alt="Transmission:"
                             className="car-spec-icon"
