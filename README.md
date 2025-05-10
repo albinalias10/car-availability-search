@@ -1,54 +1,37 @@
 # React + TypeScript + Vite
+# Car Availability Search
+--------------------------
+This project is a combination of React + TypeScript that displays an application of showing a list of available rental cars based on the sort option availabe by price. Listing All the details of the car and vendor logo in the list and the car detail page when we click on one car in the list.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📦 Tech Stack
 
-Currently, two official plugins are available:
+- **React 19**
+- **Redux Toolkit**
+- **TypeScript**
+- **CSS3 (no frameworks used)**
+- **Vitest (Unit Testing)**
+- **ESLint (Linting)**
+- **Vite**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ✅ Displaying the list of available rental cars in the main page with all details of car spec and vendor logo
+- ✅ Sorting the car list on the basis of Price. By default it's on ascending order
+- ✅ Click on a car to view a detailed page with the detailed data
+- ✅ Extract and display Pickup and Return location info as a legend above the list
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js (version 18 or higher recommended)
+- npm
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### 1. Clone the Repository
+- cline the repo git clone https://github.com/albinalias10/car-availability-search.git
+- get into the repo "cd car-availability-search"
+- install the dependencies using "npm install"
+- for running in development server  "npm run dev"
