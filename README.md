@@ -1,5 +1,4 @@
-# React + TypeScript + Vite
-# Car Availability Search
+# Car Availability Search (React + TypeScript)
 --------------------------
 This project is a combination of React + TypeScript that displays an application of showing a list of available rental cars based on the sort option availabe by price. Listing All the details of the car and vendor logo in the list and the car detail page when we click on one car in the list.
 
