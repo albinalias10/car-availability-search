@@ -13,7 +13,7 @@ const CarContainer: React.FC<CarContainerProps> = ({ isLoading = true }) => {
     return (
         <div className="car-grid-container">
             {isLoading ? <div className="loading-container">{LOADING_TEXT}</div> : <div className="car-grid-layout">
-                {carDetailsArray.length > 0 ? carDetailsArray.map((carItemData, index) => (
+                {(carDetailsArray && carDetailsArray.length) > 0 ? carDetailsArray.map((carItemData, index) => (
                     <CarItem key={index} carDetails={carItemData} />
                 )) : null}
             </div>}

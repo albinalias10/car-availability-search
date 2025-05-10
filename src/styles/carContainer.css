@@ -15,10 +15,10 @@
 
 .car-grid-layout {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Default to 1 column for mobile */
+    grid-template-columns: repeat(1, 1fr); /* 1 items per row for mobile */
     gap: 3rem;
     padding: 1rem;
-    justify-items: center; /* Center the items in each cell */
+    justify-items: center; 
 }
 
 @media (min-width: 768px) {

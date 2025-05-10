@@ -21,13 +21,13 @@ const BodyContainer: React.FC<BodyContainerProps> = ({ isLoading = true }) => {
             <div className="content-layer">
                 <CustomRoundedButton>
                     <span>
-                        {pickupReturnDetails.pickupLocation}
+                        {pickupReturnDetails?.pickupLocation}
                         <img
                             src={angleRight}
                             alt=">"
                             className="arrow-icon"
                         />
-                        {pickupReturnDetails.returnLocation}
+                        {pickupReturnDetails?.returnLocation}
                     </span>
                 </CustomRoundedButton>
                 <SortDropdown options={priceOptions} isCarSelected={isCarSelected} />
