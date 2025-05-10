@@ -2,6 +2,7 @@ export const SET_SORTING_ORDER = "SET_SORTING_ORDER";
 export const SET_PICKUP_RETURN_DETAILS = "SET_PICKUP_RETURN_DETAILS";
 export const SET_CAR_DETAILS_ARRAY_DATA = "SET_CAR_DETAILS_ARRAY_DATA";
 export const SET_CAR_DETAILS = "SET_CAR_DETAILS";
+export const CLEAR_CAR_DETAILS = "CLEAR_CAR_DETAILS";
 
 export type SortValue = "asc" | "desc";
 
@@ -51,4 +52,9 @@ export interface setCarDetailsAction {
     payload: CarDetails[];
 }
 
-export type ActionTypes = setSortingAction | setPickupReturnDetailsAction | setCarDetailsArrayAction | setCarDetailsAction;
+export interface clearCarDetailsAction {
+    type: typeof CLEAR_CAR_DETAILS;
+    payload: [];
+}
+
+export type ActionTypes = setSortingAction | setPickupReturnDetailsAction | setCarDetailsArrayAction | setCarDetailsAction | clearCarDetailsAction;

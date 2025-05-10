@@ -24,6 +24,11 @@ export const carReducer = (state = initialState, action: ActionTypes): StoreStat
                 ...state,
                 selectedCarDetails: action.payload
             };
+        case "CLEAR_CAR_DETAILS":
+            return {
+                ...state,
+                selectedCarDetails: action.payload
+            };
         case "SET_SORTING_ORDER": {
             const sortedData: CarDetails[] = action.payload === "asc" ? [...state.carDetailsData].sort((prevItem, nextItem) => prevItem.price - nextItem.price) :
                 [...state.carDetailsData].sort((prevItem, nextItem) => nextItem.price - prevItem.price);

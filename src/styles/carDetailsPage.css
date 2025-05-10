@@ -1,0 +1,122 @@
+.car-details-wrapper {
+    padding: 1.5rem;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.car-details-card {
+    display: flex;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .5);
+    width: 100%;
+    padding: 3rem;
+}
+
+.car-details-image-section {
+    flex: 1 1 40%;
+    position: relative;
+    background: #f7f7f7;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 280px;
+}
+
+.car-details-car-image {
+    width: 100%;
+    object-fit: contain;
+}
+
+.car-details-vendor-logo {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 60px;
+    height: auto;
+}
+
+.car-details-separator {
+    width: 1px;
+    background: #c7c7cd;
+    margin: 1rem 0;
+}
+
+.car-details-info-section {
+    flex: 1 1 60%;
+    padding: 1rem;
+    min-width: 300px;
+}
+
+.car-details-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.car-spec-details {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #111;
+}
+
+.car-spec-icon-layout {
+    display: flex;
+    align-items: baseline;
+}
+
+.car-spec-icon {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+}
+
+.car-details-price-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.car-details-back-button {
+    background: #e6356f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 1rem auto;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    height: 2.5rem;
+}
+
+.car-details-back-button:hover {
+    background: #e6356f;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .car-details-card {
+        flex-direction: column;
+    }
+
+    .car-details-separator {
+        display: none;
+    }
+
+    .car-details-back-button {
+        width: 100%;
+    }
+
+    .car-details-price-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

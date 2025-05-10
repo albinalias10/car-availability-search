@@ -7,6 +7,7 @@ import {
     type ActionTypes,
     type PickupReturnDetails,
     type CarDetails,
+    CLEAR_CAR_DETAILS,
 } from './actionType';
 
 export const setSortingOrder = (sortValue: SortValue): ActionTypes => {
@@ -32,5 +33,11 @@ export const setCarDetails = (selectedCarDetails: CarDetails[]): ActionTypes => 
     return {
         type: SET_CAR_DETAILS,
         payload: selectedCarDetails
+    };
+};
+export const clearCarDetails = (): ActionTypes => {
+    return {
+        type: CLEAR_CAR_DETAILS,
+        payload: []
     };
 };

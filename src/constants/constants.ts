@@ -6,3 +6,8 @@
  export const LOADING_TEXT = "Loading...";
  export const NETWORK_ERROR_TEXT = "Network Error! Please try again later.";
  export const ERROR_DATA_TEXT = "Error fetching data:! Please try again later.";
+ export const PASSENGER_TEXT = "Passengers";
+ export const BAGGAGE_TEXT = "Bag space";
+ export const DOORS_TEXT = "Doors";
+ export const AIR_CONDITIONED_TEXT = "Air Conditioned";
+ export const BACK_BUTTON_TEXT = "BACK TO MAIN PAGE";
