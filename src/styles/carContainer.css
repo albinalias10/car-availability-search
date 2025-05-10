@@ -1,0 +1,34 @@
+.car-grid-container {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.loading-container {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333333;
+    padding: 2.5rem 0;
+}
+
+
+.car-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default to 1 column for mobile */
+    gap: 3rem;
+    padding: 1rem;
+    justify-items: center; /* Center the items in each cell */
+}
+
+@media (min-width: 768px) {
+    .car-grid-layout {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row for tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .car-grid-layout {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row for desktops */
+    }
+}
