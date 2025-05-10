@@ -15,38 +15,40 @@ interface SortDropdownProps {
 }
 
 const SortDropdown: React.FC<SortDropdownProps> = ({ options, isCarSelected }) => {
+    const dispatch = useDispatch<AppDispatch>();
+    const sortDropdownRef = useRef<HTMLDivElement>(null);
     const [isOpen, setIsOpen] = useState(false);
     const selectedSortValue = useSelector((state: RootState) => state.sortValue);
     const [selectedOption, setSelectedOption] = useState<Option | null>(
-        options.find((option) => option.value === selectedSortValue) || null
+        options.find((option) => option.value === selectedSortValue) || null // Set the initial selected option based on the redux store value
     );
-    const dispatch = useDispatch<AppDispatch>();
-    const sortDropdownRef = useRef<HTMLDivElement>(null);
 
     const handleOptionClick = (option: Option) => {
         setSelectedOption(option);
-        dispatch(setSortingOrder(option.value as SortValue)); // Dispatch the selected option value to Redux store
+        // calling the action to set which sorting order vsalue is selected in redux store
+        dispatch(setSortingOrder(option.value as SortValue));
         setIsOpen(false);
     };
 
+    /*Closing the sort dropdown when click outside of the dropdown component */
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-          if (isOpen && sortDropdownRef.current && !sortDropdownRef.current.contains(event.target as Node)) {
-            setIsOpen(false);
-          }
+            if (isOpen && sortDropdownRef.current && !sortDropdownRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
         };
-        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside); // Add event listener to close dropdown on outside click
         return () => {
-          document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('mousedown', handleClickOutside); // Cleaning up event listener during component unmount
         };
-      }, [isOpen]);
+    }, [isOpen]);
 
     return (
         <div className={`sort-dropdown-container ${isCarSelected ? ' dropdown-disabled' : ''}`} ref={sortDropdownRef}>
             <button
                 className="dropdown-button"
                 onClick={() => setIsOpen((prev) => !prev)}
-                disabled={isCarSelected} 
+                disabled={isCarSelected}
             >
                 {SORT_DROPDOWN_DEFAULT_LABEL} {selectedOption ? selectedOption.label : DROPDOWN_PLACEHOLDER_TEXT}
                 <img

@@ -30,7 +30,7 @@ export interface CarDetails {
     price: number;
     currency: string;
     isAirConditioned: boolean;
-  }
+}
 
 export interface setSortingAction {
     type: typeof SET_SORTING_ORDER;

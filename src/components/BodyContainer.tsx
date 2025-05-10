@@ -15,6 +15,7 @@ interface BodyContainerProps {
 
 const BodyContainer: React.FC<BodyContainerProps> = ({ isLoading = true }) => {
     const pickupReturnDetails = useSelector((state: RootState) => state.pickupReturnDetails);
+    //checking if any car is selected or not, if selected calling the detailsComponent, otherwise the list the car list component
     const isCarSelected: boolean = useSelector((state: RootState) => state.selectedCarDetails?.length > 0);
     return (
         <div className="body-container">

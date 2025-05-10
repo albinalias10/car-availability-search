@@ -10,13 +10,13 @@
     background: white;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, .5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .5); /* Shadow for the details wrapper layout */
     width: 100%;
     padding: 3rem;
 }
 
 .car-details-image-section {
-    flex: 1 1 40%;
+    flex: 1 1 40%; /* 40% of the width for the image section */
     position: relative;
     background: #f7f7f7;
     padding: 1.5rem;
@@ -46,7 +46,7 @@
 }
 
 .car-details-info-section {
-    flex: 1 1 60%;
+    flex: 1 1 60%;  /* 60% of the width for the info section */
     padding: 1rem;
     min-width: 300px;
 }
@@ -102,6 +102,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Responsive styles for the car details page */
 @media (max-width: 768px) {
     .car-details-card {
         flex-direction: column;
