@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomRoundedButton from './common/CustomRoundedButton';
-import '../styles/BodyContainer.css';
+import '../styles/bodyContainer.css';
 import SortDropdown from './SortDropdown';
 import { priceOptions } from '../types/priceOptionType';
 import angleRight from '../assets/icons/angle-right.svg';

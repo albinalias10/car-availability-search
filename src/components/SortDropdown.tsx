@@ -4,7 +4,7 @@ import type { Option } from '../types/priceOptionType';
 import { SORT_DROPDOWN_DEFAULT_LABEL, DROPDOWN_PLACEHOLDER_TEXT } from '../constants/constants';
 import angleDown from '../assets/icons/angle-down.svg';
 import angleUp from '../assets/icons/angle-up.svg';
-import '../styles/SortDropdown.css';
+import '../styles/sortDropdown.css';
 import type { AppDispatch, RootState } from '../redux/store';
 import { setSortingOrder } from '../redux/action';
 import type { SortValue } from '../redux/actionType';

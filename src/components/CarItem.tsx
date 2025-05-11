@@ -1,6 +1,6 @@
 import React from 'react';
 import type { CarDetails } from '../redux/actionType';
-import '../styles/CarItem.css';
+import '../styles/carItem.css';
 import person from '../assets/icons/person.svg';
 import bag from '../assets/icons/bag.svg';
 import door from '../assets/icons/door.svg';

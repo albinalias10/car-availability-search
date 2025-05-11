@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/CustomRoundedButton.css';
+import '../../styles/customRoundedButton.css';
 
 /* Implementing Custom Rounded Reusable Button */
 const CustomRoundedButton: React.FC<CustomRoundedButtonProps> = ({ children, onClick }) => {

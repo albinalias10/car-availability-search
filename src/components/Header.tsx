@@ -1,6 +1,6 @@
 import React from 'react';
 import partnerLogo from '../assets/partner-logo/partner.svg';
-import '../styles/Header.css';
+import '../styles/header.css';
 import { HEADER_TITLE } from '../constants/constants';
 
 
