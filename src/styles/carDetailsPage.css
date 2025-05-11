@@ -13,6 +13,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, .5); /* Shadow for the details wrapper layout */
     width: 100%;
     padding: 3rem;
+    align-items: center;
 }
 
 .car-details-image-section {
@@ -23,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 280px;
+    min-width: 200px;
 }
 
 .car-details-car-image {
@@ -48,7 +49,7 @@
 .car-details-info-section {
     flex: 1 1 60%;  /* 60% of the width for the info section */
     padding: 1rem;
-    min-width: 300px;
+    min-width: 200px;
 }
 
 .car-details-title {
